@@ -79,4 +79,34 @@ print(random.choice(quotes))
 We need to import the random library and use choice to choose anything inside an array. Inside the Array there are a few string elements.
 
 
-Problem 2.
+Problem 2. Input numbers and print the average of those numbers.(Using the array)
+
+{% highlight Python %}
+num = []
+i = 0
+sum = 0
+while i < 5:
+    num.append(eval(input("숫자 입력: ")))
+    sum += num[i]
+    i+=1
+print("평균: ",sum/len(num))
+{% endhighlight %}
+
+Problem 3. Say there is a dice, Roll that 1000 times and print the counts of how much each number came out(1~6).
+
+This one's pretty tricky!
+
+{% highlight Python %}
+import random
+counters = [0, 0, 0, 0, 0, 0]
+x=0
+while x <= 1000:
+    value = random.randint(0,5)
+    counters[value] = counters[value]+1
+    x+=1
+
+x=0
+while x < 6:
+    print("주사위가 ",(x+1),"인 경우는 ", counters[x])
+    x+=1
+{% endhighlight %}
